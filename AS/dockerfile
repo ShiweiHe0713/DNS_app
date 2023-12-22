@@ -1,0 +1,12 @@
+FROM openjdk:11-jre-slim
+
+WORKDIR /usr/src/app
+
+# Copy the Java file into the container
+COPY As.java ./
+
+# Compile the Java file
+RUN javac As.java
+
+# Command to run the Java program
+CMD ["java", "As"]

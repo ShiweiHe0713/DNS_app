@@ -1,0 +1,14 @@
+# Use a base image with Java
+FROM openjdk:11-jre-slim
+
+# Set the working directory inside the container
+WORKDIR /usr/src/app
+
+# Copy the Java file into the container
+COPY Fs.java ./
+
+# Compile the Java file
+RUN javac Fs.java
+
+# Command to run the Java program
+CMD ["java", "Fs"]
